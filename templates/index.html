@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web Crawler</title>
+    <meta charset="utf-8">
+    <style>
+      iframe {
+        width: 700px;
+        height: 450px;
+        border: none;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST" action="/crawl">
+      <input type="text" name="url" value="{{ url }}">
+      <button type="submit">Crawl</button>
+    </form>
+    <iframe src="{{ url }}"></iframe>
+    <textarea cols="80" rows="30">{{ content }}</textarea>
+  </body>
+</html>
